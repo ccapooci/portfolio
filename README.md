@@ -7,3 +7,8 @@ This work will include my writings, code, scripts, or other work that is not alr
 In addition to everything in this repo, I am also especially proud of the [thesis](https://honors.libraries.psu.edu/catalog/5300cvc5673) that I completed as an undergraduate at Penn State. Please take a look at that, if it interests you.    
 
 Enjoy! Reach out if you have any questions.
+
+## Future Updates
+
+I am in the process of completing my degree and I am completing 3 more classes, Managerial Finance, Software Security, and Metaheuristics. 
+Once I complete this courses, I plan on adding my work from these classes as well!
