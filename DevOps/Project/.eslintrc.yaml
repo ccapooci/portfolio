@@ -1,0 +1,7 @@
+env:
+    browser: true
+    es6: true
+rules:
+    # Override default settings
+    eqeqeq: warn
+    strict: off

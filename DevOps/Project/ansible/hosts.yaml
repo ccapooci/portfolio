@@ -1,0 +1,5 @@
+[staging]
+152.7.177.52 ansible_user=ashon ansible_python_interpreter=/usr/bin/python3
+
+[production]
+152.7.177.193 ansible_user=ashon ansible_python_interpreter=/usr/bin/python3

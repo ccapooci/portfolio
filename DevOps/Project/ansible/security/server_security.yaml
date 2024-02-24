@@ -1,0 +1,23 @@
+---
+- name: Update security of servers.
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    # https://www.baeldung.com/linux/install-security-updates
+    # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#parameter-update_cache
+    # same as apt-get update
+    - name: Update apt with latest package updates.
+      apt: 
+        update_cache: true   
+    # https://debian-handbook.info/browse/stable/sect.apt-get.html
+    # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#parameter-upgrade
+    - name: Perform apt safe-upgrade
+      apt: 
+        upgrade: "safe"
+    - name: Perform apt dist-upgrade
+      apt: 
+        upgrade: "dist"
+    - name: Remove unused dependencies
+      apt:
+        autoremove: true

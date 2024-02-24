@@ -1,0 +1,36 @@
+{
+    "data": {
+        "status" : "OK"
+    },
+    "deploy": 
+    { 
+        "type": "dialog_submission",
+        "callback_id": "ab01f610-148c-4eef-a555-f84bae6252dc",
+        "state": "Submitted to deploy bot ",
+        "user_id": "e1n5uhwkyir48ju5gacuxew7fh",
+        "channel_id": "jtut6b7f9jdc8mt3anmmya9sku6a",
+        "team_id": "kzsmo64zkbbcb8jgf1691i4mmxrc",
+        "submission":
+        {
+          "botname": "Bot2",
+          "repo": "https://github.ncsu.edu/CSC-510/HW2.git"
+        },
+        "cancelled": false 
+    },
+    "create" :
+    {
+        "type": "dialog_submission",
+        "callback_id": "ab01f610-148c-4eef-a555-f84bae6252dc",
+        "state": "Submitted to create bot ",
+        "user_id": "e1n5uhwkyir48ju5gacuxew7fh",
+        "channel_id": "jtut6b7f9jdc8mt3anya9skmmmu6a",
+        "team_id": "kzsmo64zkbbcb8jgf1691mmi4xrc",
+        "submission": 
+          { 
+            "botname": "bot2", 
+            "features": "repos", 
+            "platform": "opt1" 
+          },
+        "cancelled": false 
+    }
+}

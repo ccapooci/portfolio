@@ -1,0 +1,44 @@
+{
+  "name": "csc510-14",
+  "version": "1.0.0",
+  "description": "# CSC510-14 TEAM",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec test/*.js"
+  },
+  "keywords": [
+    "mattermost",
+    "bot"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.ncsu.edu/csc510-s2022/CSC510-14"
+  },
+  "author": "Team-14",
+  "license": "ISC",
+  "devDependencies": {
+    "api-ai-javascript": "^2.0.0-beta.21",
+    "supertest": "^6.2.2",
+    "c8": "^7.11.0",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1",
+    "nock": "^13.2.4",
+    "underscore": "^1.6.0"
+  },
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "mattermost-client": "^6.4.0",
+    "node-fetch": "^2.6.0",
+    "parse-link-header": "^2.0.0",
+    "request": "^2.85.0",
+    "axios": "^0.26.0",
+    "dockerode": "^3.3.1",
+    "node": "^17.5.0",
+    "tar-fs": "^2.1.1",
+    "got": "^10.0.0",
+    "underscore": "^1.8.3"
+  }
+}

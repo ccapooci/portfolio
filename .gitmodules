@@ -1,0 +1,3 @@
+[submodule "Projects/TreasureChest"]
+	path = Projects/TreasureChest
+	url = git@github.com:ccapooci/TreasureChest.git
