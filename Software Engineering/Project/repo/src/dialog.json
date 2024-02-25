@@ -1,0 +1,84 @@
+{
+    "create": {
+        "trigger_id": "trigger_id",
+        "url": "url",
+        "dialog": {
+            "callback_id": "callback_id",
+            "title": "Celebrimbot Form",
+            "introduction_text": "Create a Bot",
+            "elements": [
+                {
+                    "display_name": "Bot Name",
+                    "name": "botname",
+                    "type": "text",
+                    "subtype": "text",
+                    "placeholder": "must be between 4 and 10 characters"
+                },
+                {
+                    "display_name": "Platform",
+                    "name": "platform",
+                    "type": "select",
+                    "options": [
+                       {
+                         "text": "GitHub",
+                         "value": "opt1"
+                       }
+                     ]
+                },
+                {
+                    "display_name": "Which features do you need?",
+                    "name": "features",
+                    "type": "radio",
+                    "options": [
+                      {
+                        "text": "Pull Requests",
+                        "value": "pr"
+                      },
+                      {
+                        "text": "Issues",
+                        "value": "issues"
+                      },
+                      {
+                        "text": "Repositories",
+                        "value": "repos"
+                      }
+                    ],
+                    "help_text": "Please indicate the features to be included in the GitHub Bot.",
+                    "default": "repos"
+                  }
+                
+            ],
+            "submit_label": "Submit",
+            "notify_on_cancel": true,
+            "state": "Submitted to create bot"
+            }
+    },
+    "deploy": {
+        "trigger_id": "trigger_id",
+        "url": "url",
+        "dialog": {
+            "callback_id": "callback_id",
+            "title": "Celebrimbot Form",
+            "introduction_text": "Deploy a Bot",
+            "elements": [
+                {
+                    "display_name": "Bot Name",
+                    "name": "botname",
+                    "type": "text",
+                    "subtype": "text",
+                    "placeholder": "must be between 4 and 10 characters"
+                },
+                {
+                  "display_name": "Github Repository",
+                  "name": "repo",
+                  "type": "text",
+                  "subtype": "text",
+                  "placeholder": "Link to the Github Repository"
+              } 
+            ],
+            "submit_label": "Submit",
+            "notify_on_cancel": true,
+            "state": "Submitted to deploy bot "
+            }
+    }
+}

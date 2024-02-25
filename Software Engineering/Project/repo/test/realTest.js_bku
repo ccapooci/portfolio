@@ -1,0 +1,86 @@
+// Started with https://github.ncsu.edu/CSC-510/Mocking/test/testMain.js
+
+const chai = require("chai");
+const expect = chai.expect;
+const nock = require("nock");
+const { kill } = require("process");
+var config = {};
+// Retrieve our api token from the environment variables.
+config.token = process.env.GITHUBTOKEN;
+
+
+const github = require("../src/github.js");
+
+// Load mock data
+const data = require("../mockGithub.json")
+const GITHUB_API_URL = "https://github.ncsu.edu/api/v3";
+
+//////////////////////////////
+// TEST SUITE FOR GITHUB TOOL
+//////////////////////////////
+describe('testGithub()', function () {
+    let shaBlob = "";
+    let user = "";
+    let repoName = "testrepo2";
+    describe('#createRepo()', function () {
+            
+        it('should return the correct repo name', async function () {
+            let returnData = await github.createRepo(repoName, config.token);
+            
+            expect(returnData.data.name).to.equal(repoName);
+        });
+    });
+
+    describe('#getUser()', function () {
+            
+        it('should return the correct repo name', async function () {
+            let userData = await github.getUser(config.token);
+
+            user = userData.data.login;
+
+            expect(userData.data.login).to.equal("cvcapooc");
+        });
+
+    });
+
+    describe('#getFileInfo()', function () {           
+        let file = "README.md";
+
+        it('should return the correct repo name', async function () {
+            let returnData = await github.getBlobInfo(repoName, user, file, config.token);
+
+            shaBlob = returnData.data.sha;
+            
+            expect(returnData.data.name).to.equal("README.md");
+        });
+
+
+    });
+
+    describe('#updateFile()', function () {
+        let fileName1 = "README.md";
+        let contents1 = "contents1";
+        let commitMessage1 = "commit message1";
+        let branch = "main";
+
+        it('return the correct filename', async function () {
+            let returnData1 = await github.updateFile(repoName, user, fileName1, shaBlob, contents1, commitMessage1, branch, config.token);
+
+            expect(returnData1.data.content.path).to.equal(fileName);
+        });
+    });
+
+    describe('#createFile()', function () {
+        let fileName2 = "README3.md";
+        let contents2 = "contents2";
+        let commitMessage2 = "commit message2";
+        let branch = "main";
+
+        it('return the correct filename', async function () {
+            let returnData2 = await github.createFile(repoName, user, fileName2, contents2, commitMessage2, branch, config.token);
+
+            expect(returnData2.data.content.path).to.equal(fileName2);
+        });
+    });
+
+});

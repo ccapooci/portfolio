@@ -1,0 +1,1 @@
+I am working through the CIPT training.  I am presenting the CIPT Certificate of Attendance to show that I purchased the course and intend on completing it.
