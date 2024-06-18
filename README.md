@@ -8,7 +8,3 @@ In addition to everything in this repo, I am also especially proud of the [thesi
 
 Enjoy! Reach out if you have any questions.
 
-## Future Updates
-
-I am in the process of completing my degree and I am completing 3 more classes, Managerial Finance, Software Security, and Metaheuristics. 
-Once I complete these courses, I plan on adding my work from them as well!
